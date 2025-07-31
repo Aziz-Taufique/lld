@@ -13,13 +13,15 @@ public:
 
 class SportsCar : public Car
 {
-public:
+private:
     int speed;
     int gear;
     std::string name;
     std::string model;
     bool isEngineOn;
+    std::string tyre;
 
+public:
     SportsCar(std::string name, std::string model)
     {
         this->name = name;
@@ -27,6 +29,12 @@ public:
         isEngineOn = false;
         speed = 0;
         gear = 0;
+        tyre = "MRF";
+    }
+
+    void setTyre(std::string tyre)
+    {
+        this->tyre = tyre;
     }
 
     void startCar() override
@@ -88,6 +96,7 @@ public:
         std::cout << "Car: " << name << " " << model << "\n";
         std::cout << "Speed: " << speed << " km/h\n";
         std::cout << "Gear: " << gear << "\n";
+        std::cout << "Tyre: " << tyre << "\n";
         std::cout << "Engine: " << (isEngineOn ? "On" : "Off") << std::endl;
     }
 };
@@ -101,6 +110,7 @@ int main()
     car->accelerate();
     // car->stopCar();
     car->brake();
+    car->setTyre("FM");
     car->display();
 
     delete car;
