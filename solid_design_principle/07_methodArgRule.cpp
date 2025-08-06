@@ -1,5 +1,8 @@
 #include <iostream>
 
+// Method arg rules:-
+// Subtype method arguments can be identical or wider than the supertype.
+// cpp impose this by keeping signature identical.
 class Parent
 {
 public:
