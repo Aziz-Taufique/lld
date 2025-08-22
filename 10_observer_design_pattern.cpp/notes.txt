@@ -1,0 +1,2 @@
+OBSERVER DESIGN PATTERN :- 
+Defined as ont-to-many relationship  between objects so that when one object changes its state, all of its dependent obj are notified, and update automatically.
